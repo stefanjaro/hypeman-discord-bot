@@ -6,7 +6,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 # load environment params
-load_dotenv()
+# load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
@@ -34,6 +34,13 @@ def time_until(target_date):
 
     return f"We've got {time_remaining_days} days {time_remaining_hours} hours and {time_remaining_minutes} minutes until the epic showdown between Wasim and Lahiru!"
 
+def help_user():
+    """
+    Help response for when the user types in an invalid command.
+    """
+    help_response = "There are only 4 primary commands (for now): \n`hypeman who`\n`hypeman watch`\n`hypeman when`\n`hypeman time`"
+    return help_response
+
 @bot.event
 async def on_ready():
     guild = discord.utils.get(bot.guilds, name=GUILD)
@@ -44,7 +51,7 @@ async def on_ready():
     )
 
 @bot.command(name='man')
-async def hypeman_cheer(ctx, *args):
+async def hypeman_main(ctx, *args):
     # stich together user input
     user_input = " ".join(args).lower()
 
@@ -63,18 +70,13 @@ async def hypeman_cheer(ctx, *args):
     response = response_repo.get(user_input)
 
     if response == None:
-        response = "I don't recognize that command."
+        response = f"I don't recognize that command. {help_user()}"
 
     await ctx.send(response)
 
 @bot.command(name='test')
 async def test_bot(ctx):
     response = "Yes I've been connected and I'm working!"
-    await ctx.send(response)
-
-@bot.command(name='pleasehelp')
-async def help_user(ctx):
-    response = "There are only 4 primary commands (for now) -- \n`hypeman who`\n`hypeman watch`\n`hypeman when`\n`hypeman time`"
     await ctx.send(response)
 
 bot.run(TOKEN)
