@@ -63,7 +63,8 @@ async def hypeman_main(ctx, *args):
         "who": "It's Wasim vs Lahiru on Age of Empires II Definitive Edition!",
         "watch": "You can watch it live on discord! Just tune into Althaf's stream!",
         "when": "This Sunday Night! The 6th of December 2020.",
-        "time": time_until(time_of_event)
+        "time": time_until(time_of_event),
+        "why": "It's an Age of Empires kinda thing, you wouldn't get it."
     }
 
     # get response and handle for wrong commands
