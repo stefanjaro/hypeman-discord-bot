@@ -1,17 +1,38 @@
 # bot.py
 import os
-import random
-import math
+from datetime import datetime, timedelta, timezone
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
 
-# load_dotenv()
+# load environment params
+load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
 # set prefix
-bot = commands.Bot(command_prefix='hypeman')
+bot = commands.Bot(command_prefix='hype')
+
+def time_until(target_date):
+    """
+    Calculates the number of days, hours and seconds to a particular date and time
+    """
+    # get current utc date and time
+    current_utc_datetime = datetime.utcnow()
+
+    # adjust to sri lankan time
+    current_sl_datetime = current_utc_datetime + timedelta(hours=5, minutes=30)
+
+    # get difference between target date and current sl datetime
+    time_remaining = target_date - current_sl_datetime
+
+    # get time components
+    time_remaining_days = time_remaining.days
+    time_remaining_total_seconds = time_remaining.seconds
+    time_remaining_hours = time_remaining_total_seconds // 3600
+    time_remaining_minutes = (time_remaining_total_seconds // 60) % 60
+
+    return f"We've got {time_remaining_days} days {time_remaining_hours} hours and {time_remaining_minutes} minutes until the epic showdown between Wasim and Lahiru!"
 
 @bot.event
 async def on_ready():
@@ -22,9 +43,38 @@ async def on_ready():
         f'Guild Details: {guild.name} (id: {guild.id})'
     )
 
-@bot.command(name="test", help='See if the bot\'s been connected and is working')
-async def movie_details_with_name(ctx, *args): 
-    test_response = 'Yes I\'ve been connected and I\'m working!'
-    await ctx.send(test_response)
+@bot.command(name='man')
+async def hypeman_cheer(ctx, *args):
+    # stich together user input
+    user_input = " ".join(args).lower()
+
+    # specify time of the event in sl time
+    time_of_event = datetime(year=2020, month=12, day=6, hour=21, minute=30)
+
+    # response repository
+    response_repo = {
+        "who": "It's Wasim vs Lahiru on Age of Empires II Definitive Edition!",
+        "watch": "You can watch it live on discord! Just tune into Althaf's stream!",
+        "when": "This Sunday Night! The 6th of December 2020.",
+        "time": time_until(time_of_event)
+    }
+
+    # get response and handle for wrong commands
+    response = response_repo.get(user_input)
+
+    if response == None:
+        response = "I don't recognize that command."
+
+    await ctx.send(response)
+
+@bot.command(name='test')
+async def test_bot(ctx):
+    response = "Yes I've been connected and I'm working!"
+    await ctx.send(response)
+
+@bot.command(name='pleasehelp')
+async def help_user(ctx):
+    response = "There are only 4 primary commands (for now) -- \n`hypeman who`\n`hypeman watch`\n`hypeman when`\n`hypeman time`"
+    await ctx.send(response)
 
 bot.run(TOKEN)
