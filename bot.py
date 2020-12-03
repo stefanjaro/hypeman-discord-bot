@@ -64,7 +64,8 @@ async def hypeman_main(ctx, *args):
         "watch": "You can watch it live on discord! Just tune into Althaf's stream!",
         "when": "This Sunday Night! The 6th of December 2020.",
         "time": time_until(time_of_event),
-        "why": "It's an Age of Empires kinda thing, you wouldn't get it."
+        "why": "It's an Age of Empires kinda thing, you wouldn't get it.",
+        "charitha": "**CHARITHA THE MATCH ANNOUNCER SAYS**:\nFighting from the red corner ... hailing for the land of the maple leaves ... the only man to reject onella's advances ... **Wasim**!!!!\nand fighting from the blue corner .... hailing from Brussels , the country not the vegetable , the only man to peddle a bike downhill , ***** a pillow during a trip ... the former deputy head boy of some made up school ... **Lahiru**!!!"
     }
 
     # get response and handle for wrong commands
