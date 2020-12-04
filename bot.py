@@ -38,7 +38,7 @@ def help_user():
     """
     Help response for when the user types in an invalid command.
     """
-    help_response = "There are only a few primary commands: \n`hypeman who`\n`hypeman watch`\n`hypeman when`\n`hypeman time`\n`hypeman why`\n`hypeman charitha`\n`hypeman odds`\n`hypeman odds for lahiru`\n`hypeman odds for wasim`\n`hypeman lol`\n`idea of wasim`\n`lahiru's bike`"
+    help_response = "There are only a few primary commands: \n`hypeman who`\n`hypeman watch`\n`hypeman when`\n`hypeman time`\n`hypeman why`\n`hypeman charitha`\n`hypeman odds`\n`hypeman odds for lahiru`\n`hypeman odds for wasim`\n`hypeman lol`\n`hypeman idea of wasim`\n`hypeman lahiru's bike`"
     return help_response
 
 @bot.event
