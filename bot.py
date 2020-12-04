@@ -38,7 +38,7 @@ def help_user():
     """
     Help response for when the user types in an invalid command.
     """
-    help_response = "There are only a few primary commands: \n`hypeman who`\n`hypeman watch`\n`hypeman when`\n`hypeman time`\n`hypeman why`\n`hypeman charitha`\n`hypeman odds`\n`hypeman odds for lahiru`\n`hypeman odds for wasim`\n`hypeman lol`\n`hypeman idea of wasim`\n`hypeman lahiru's bike`"
+    help_response = "There are only a few primary commands: \n`hypeman who`\n`hypeman watch`\n`hypeman when`\n`hypeman time`\n`hypeman why`\n`hypeman charitha`\n`hypeman odds`\n`hypeman odds for lahiru`\n`hypeman odds for wasim`\n`hypeman lol`\n`hypeman idea of wasim`\n`hypeman lahirus bike`"
     return help_response
 
 @bot.event
@@ -71,7 +71,7 @@ async def hypeman_main(ctx, *args):
         "odds for wasim": "According to the Oracle from the Matrix (2136-Unknown), there is no Wasim, there is only your idea of Wasim and my idea of Wasim and our idea of whether he'll win this match.",
         "lol": "This is no time for jokes. I'm a serious bot.",
         "idea of wasim": f"https://i.imgur.com/PzqiXuB.jpg",
-        "lahiru's bike": "Oh god, please don't break your hand before the game Lahiru."
+        "lahirus bike": "Oh god, please don't break your hand before the game Lahiru."
     }
 
     # get response and handle for wrong commands
