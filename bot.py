@@ -38,7 +38,7 @@ def help_user():
     """
     Help response for when the user types in an invalid command.
     """
-    help_response = "There are only a few primary commands: \n`hypeman who`\n`hypeman watch`\n`hypeman when`\n`hypeman time`\n`hypeman why`\n`hypeman charitha`\n`hypeman odds`\n`hypeman odds for lahiru`\n`hypeman odds for wasim`\n`hypeman lol`"
+    help_response = "There are only a few primary commands: \n`hypeman who`\n`hypeman watch`\n`hypeman when`\n`hypeman time`\n`hypeman why`\n`hypeman charitha`\n`hypeman odds`\n`hypeman odds for lahiru`\n`hypeman odds for wasim`\n`hypeman lol`\n`idea of wasim`\n`lahiru's bike`"
     return help_response
 
 @bot.event
@@ -68,8 +68,10 @@ async def hypeman_main(ctx, *args):
         "charitha": "**CHARITHA THE MATCH ANNOUNCER SAYS**:\nFighting from the red corner ... hailing for the land of the maple leaves ... the only man to reject onella's advances ... **Wasim**!!!!\nand fighting from the blue corner .... hailing from Brussels , the country not the vegetable , the only man to peddle a bike downhill , ***** a pillow during a trip ... the former deputy head boy of some made up school ... **Lahiru**!!!",
         "odds": "According to Paul the Octopus (2008-2010) there is a 90 percent chance that either Lahiru or Wasim will win. There is a 10 percent chance that the boars will win.",
         "odds for lahiru": "According to Nostradamus (1503-1566), Lahiru's stars are aligned and his victory star in particular shines bright.",
-        "odds for wasim": "According to the Oracle from the Matrix (2136-Unknown), there is no Wasim, there is only your idea of Wasim and my idea of Wasim and our idea of whether he'll win this match",
-        "lol": "This is no time for jokes. I'm a serious bot."
+        "odds for wasim": "According to the Oracle from the Matrix (2136-Unknown), there is no Wasim, there is only your idea of Wasim and my idea of Wasim and our idea of whether he'll win this match.",
+        "lol": "This is no time for jokes. I'm a serious bot.",
+        "idea of wasim": f"https://i.imgur.com/PzqiXuB.jpg",
+        "lahiru's bike": "Oh god, please don't break your hand before the game Lahiru."
     }
 
     # get response and handle for wrong commands
