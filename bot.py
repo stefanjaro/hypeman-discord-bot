@@ -67,9 +67,9 @@ async def hypeman_main(ctx, *args):
         "why": "It's an Age of Empires kinda thing, you wouldn't get it.",
         "charitha": "**CHARITHA THE MATCH ANNOUNCER SAYS**:\nFighting from the red corner ... hailing for the land of the maple leaves ... the only man to reject onella's advances ... **Wasim**!!!!\nand fighting from the blue corner .... hailing from Brussels , the country not the vegetable , the only man to peddle a bike downhill , ***** a pillow during a trip ... the former deputy head boy of some made up school ... **Lahiru**!!!",
         "odds": "According to Paul the Octopus (2008-2010) there is a 90 percent chance that either Lahiru or Wasim will win. There is a 10 percent chance that the boars will win.",
-        "odds for lahiru": "According to Nostradamus (1503-1566), Lahiru's stars are aligned and his victory star in particular shines bright",
-        "odds for wasim:": "According to the Oracle from the Matrix (2136-Unknown), there is no Wasim, there is only your idea of Wasim and my idea of Wasim and our idea of whether he'll win this match",
-        "lol": "This is no time for jokes. I'm a serious bot"
+        "odds for lahiru": "According to Nostradamus (1503-1566), Lahiru's stars are aligned and his victory star in particular shines bright.",
+        "odds for wasim": "According to the Oracle from the Matrix (2136-Unknown), there is no Wasim, there is only your idea of Wasim and my idea of Wasim and our idea of whether he'll win this match",
+        "lol": "This is no time for jokes. I'm a serious bot."
     }
 
     # get response and handle for wrong commands
