@@ -23,8 +23,14 @@ def time_until(target_date):
     # adjust to sri lankan time
     current_sl_datetime = current_utc_datetime + timedelta(hours=5, minutes=30)
 
-    # get difference between target date and current sl datetime
-    time_remaining = target_date - current_sl_datetime
+    # get difference between target date and current sl datetime and handle
+    # for datetimes after the target date
+    if target_date > current_sl_datetime:
+        before_target_date = True
+        time_remaining = target_date - current_sl_datetime
+    else:
+        before_target_date = False
+        time_remaining = current_sl_datetime - target_date
 
     # get time components
     time_remaining_days = time_remaining.days
@@ -32,7 +38,10 @@ def time_until(target_date):
     time_remaining_hours = time_remaining_total_seconds // 3600
     time_remaining_minutes = (time_remaining_total_seconds // 60) % 60
 
-    return f"We've got {time_remaining_days} days {time_remaining_hours} hours and {time_remaining_minutes} minutes until the epic showdown between Wasim and Lahiru!"
+    if before_target_date == True:
+        return f"We've got {time_remaining_days} day(s) {time_remaining_hours} hour(s) and {time_remaining_minutes} minute(s) until the epic showdown between Wasim and Lahiru!"
+    else:
+        return f"{time_remaining_days} day(s) {time_remaining_hours} hour(s) and {time_remaining_minutes} minute(s) have passed since the epic showdown between Wasim and Lahiru began. What a match!"
 
 def help_user():
     """
