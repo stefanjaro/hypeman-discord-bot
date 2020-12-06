@@ -79,9 +79,10 @@ async def hypeman_main(ctx, *args):
         "odds for lahiru": "According to Nostradamus (1503-1566), Lahiru's stars are aligned and his victory star in particular shines bright.",
         "odds for wasim": "According to the Oracle from the Matrix (2136-Unknown), there is no Wasim, there is only your idea of Wasim and my idea of Wasim and our idea of whether he'll win this match.",
         "lol": "This is no time for jokes. I'm a serious bot.",
-        "idea of wasim": f"https://i.imgur.com/PzqiXuB.jpg",
+        "idea of wasim": "https://i.imgur.com/PzqiXuB.jpg",
         "lahirus bike": "Oh god, please don't break your hand before the game Lahiru.",
-        "winner": "What an incredible match! INSERT_NAME_HERE played brilliantly and INSERT_NAME_HERE did a fantastic job as well. In the end INSERT_NAME_HERE was the better player! Fantastic stuff! Congratulations to INSERT_NAME_HERE and I bet INSERT_NAME_HERE wants a rematch!"
+        "winner": "What an incredible match! INSERT_NAME_HERE played brilliantly and INSERT_NAME_HERE did a fantastic job as well. In the end INSERT_NAME_HERE was the better player! Fantastic stuff! Congratulations to INSERT_NAME_HERE and I bet INSERT_NAME_HERE wants a rematch!",
+        "grand prize": "The winner will receive the coveted $5 Steam gift card. https://i.imgur.com/XIp0FJK.png"
     }
 
     # get response and handle for wrong commands
