@@ -81,7 +81,7 @@ async def hypeman_main(ctx, *args):
         "lol": "This is no time for jokes. I'm a serious bot.",
         "idea of wasim": "https://i.imgur.com/PzqiXuB.jpg",
         "lahirus bike": "Oh god, please don't break your hand before the game Lahiru.",
-        "winner": "What an incredible match! INSERT_NAME_HERE played brilliantly and INSERT_NAME_HERE did a fantastic job as well. In the end INSERT_NAME_HERE was the better player! Fantastic stuff! Congratulations to INSERT_NAME_HERE and I bet INSERT_NAME_HERE wants a rematch!",
+        "winner": "What an incredible match! Wasim played brilliantly and Lahiru did a fantastic job as well. In the end Wasim was the better player! Fantastic stuff! Congratulations to Wasim and I bet Lahiru wants a rematch!",
         "grand prize": "The winner will receive the coveted $5 Steam gift card. https://i.imgur.com/XIp0FJK.png"
     }
 
